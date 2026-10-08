@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Five ideas that sort the book</title>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("/board/fonts/Virgil.woff2") format("woff2");
+        font-display: block;
+      }
+      html, body { margin: 0; background: #0e1016; color: #f6f3ea; font-family: "Avenir Next", "Segoe UI", sans-serif; }
+      body { padding: 24px 0 48px; }
+      h1 { width: 1280px; margin: 0 auto 8px; font-size: 28px; font-weight: 650; }
+      p.note { width: 1280px; margin: 0 auto 16px; color: #8b93a7; }
+      #board { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: #ffffff; }
+      #controls { width: 1280px; margin: 16px auto 0; display: flex; gap: 12px; align-items: center; }
+      button { background: #262b38; color: #f6f3ea; border: 0; border-radius: 8px; padding: 8px 14px; font: inherit; }
+      #refs { width: 1280px; margin: 20px auto 0; color: #d5d0c6; }
+      #refs li { margin: 4px 0; }
+      body.export #controls, body.export h1, body.export .note, body.export #refs { display: none; }
+      body.export { padding: 0; }
+    </style>
+  </head>
+  <body>
+    <div aria-hidden="true" style="position:absolute;left:-9999px;font:40px Virgil">Five ideas</div>
+    <h1>Five ideas that sort the book</h1>
+    <p class="note">Speech is ElevenLabs. Five ideas first, then two keywords and the chapters under each. Add ?theme=dark for the slate board.</p>
+    <div id="board"></div>
+    <div id="controls">
+      <button id="play" type="button">Play</button>
+      <button id="replay" type="button">Replay</button>
+      <button id="theme" type="button">Dark</button>
+    <audio id="audio" preload="auto"></audio>
+    </div>
+    <ol id="refs"></ol>
+    <script type="module" src="/board/player.js"></script>
+  </body>
+</html>
